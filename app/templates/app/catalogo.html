@@ -1,0 +1,51 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block suscripcion %}
+<div class="text-center text-black">
+    <h1>Catalogo</h1>
+</div>
+
+<table class="table table-striped-columns">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Dimensiones</th>
+            <th>Tecnica</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+    {% for p in piezas %}
+        <tr>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.descripcion }}</td>
+            <td>{{ p.precio }}</td>
+            <td>{{ p.dimensiones }}</td>
+            <td>{{ p.tecnica }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+    
+{% endblock suscripcion %}
+
+
+{% block vendedoresprincipales %}
+    
+{% endblock vendedoresprincipales %}
+
+
+{% block contacto %}
+    
+{% endblock contacto %}
+
+
+{% block ventajas %}
+    
+{% endblock ventajas %}
